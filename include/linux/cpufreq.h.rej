@@ -1,0 +1,29 @@
+--- include/linux/cpufreq.h
++++ include/linux/cpufreq.h
+@@ -363,9 +363,16 @@
+ #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_INTERACTIVE)
+ extern struct cpufreq_governor cpufreq_gov_interactive;
+ #define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_interactive)
++#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SMARTASS2)
++extern struct cpufreq_governor cpufreq_gov_smartass2;
++#define CPUFREQ_DEFAULT_GOVERNOR (&cpufreq_gov_smartass2)
++#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_HOTPLUG)
++extern struct cpufreq_governor cpufreq_gov_hotplug;
++#define CPUFREQ_DEFAULT_GOVERNOR (&cpufreq_gov_hotplug)
+ #endif
+ 
+ 
++
+ /*********************************************************************
+  *                     FREQUENCY TABLE HELPERS                       *
+  *********************************************************************/
+@@ -404,5 +411,9 @@
+ 
+ void cpufreq_frequency_table_put_attr(unsigned int cpu);
+ 
++extern int cpufreq_frequency_table_next_lowest(struct cpufreq_policy *policy,
++					struct cpufreq_frequency_table *table,
++					int *index);
++
+ 
+ #endif /* _LINUX_CPUFREQ_H */

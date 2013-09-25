@@ -1,0 +1,10 @@
+--- arch/arm/configs/cm_golden_defconfig
++++ arch/arm/configs/cm_golden_defconfig
+@@ -417,6 +417,7 @@
+ CONFIG_HIGH_RES_TIMERS=y
+ CONFIG_GENERIC_CLOCKEVENTS_BUILD=y
+ CONFIG_SMP=y
++CONFIG_HOTPLUG_CPU=y
+ CONFIG_SMP_ON_UP=y
+ CONFIG_ARM_CPU_TOPOLOGY=y
+ # CONFIG_SCHED_MC is not set
