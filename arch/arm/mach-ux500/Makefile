@@ -111,5 +111,6 @@ endif
 obj-$(CONFIG_INPUT_AB8505_MICRO_USB_DETECT)	+= ssg_micro_usb_iddet.o abx_micro_usb_iddet.o
 obj-$(CONFIG_BT_BCM4330)			+= board-bluetooth-bcm4330.o
 obj-$(CONFIG_BT_BCM4334)			+= board-bluetooth-bcm4334.o
-obj-$(CONFIG_MACH_SAMSUNG_UX500)	+= sec_common.o
+obj-$(CONFIG_FORCE_FAST_CHARGE)                 += fastchg.o
+obj-$(CONFIG_MACH_SAMSUNG_UX500)	        += sec_common.o
 
