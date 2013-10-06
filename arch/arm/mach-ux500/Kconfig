@@ -308,6 +308,13 @@ config BT_BCM4334
 	help
 	  Adds BCM4334 RFKILL driver for Broadcom BCM4334 chipset
 
+config FORCE_FAST_CHARGE
+        bool "Force AC charge mode at will"
+        default y
+        help
+        A simple sysfs interface to force adapters that
+          are detected as USB to charge as AC.
+ 
 config BT_MGMT
        bool "Bluetooth Mgmt"
        default n
