@@ -42,6 +42,11 @@
 
 #include <mach/clk.h>
 
+#ifdef   CONFIG_FORCE_FAST_CHARGE
+#include <linux/fastchg.h>
+#define  USB_FASTCHG_LOAD 1000 /* uA */
+#endif 
+
 #define MSM_USB_BASE	(motg->regs)
 #define DRIVER_NAME	"msm_otg"
 
